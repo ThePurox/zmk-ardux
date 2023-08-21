@@ -30,5 +30,11 @@
 #define MIDDLE_NONES NONE(0,0,1)
 #define TRAILING_NONES NONE(0,0,6)
 
+        boot { 
+            bindings = <&bootloader>;
+            key-positions = < 0 10 >;
+            timeout-ms = < 50 >;
+        };
+
 // Include main ardux.io keymap
 #include "../../../ardux.dtsi"
