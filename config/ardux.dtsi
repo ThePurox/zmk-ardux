@@ -223,6 +223,11 @@
 		/*****************************************
 		 * 2 key combos
 		 *****************************************/
+		boot { 
+            bindings = <&bootloader>;
+            key-positions = < 0 10 >;
+            timeout-ms = < 50 >;
+        };
 		// Function layer doesn't apply to non-big ardux presently
 		#if defined ARDUX_BIG
 		combo_layer_functions { key-positions = <KEY_F_TOP KEY_F_BOTTOM>; bindings = <&sl LAYER_ID_BIG_FUNCTION>; };
