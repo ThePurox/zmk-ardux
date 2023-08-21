@@ -225,7 +225,7 @@
 		 *****************************************/
 		boot { 
             bindings = <&bootloader>;
-            key-positions = < 0 10 >;
+            key-positions = < KEY_S KEY_O >;
             timeout-ms = < 50 >;
         };
 		// Function layer doesn't apply to non-big ardux presently
