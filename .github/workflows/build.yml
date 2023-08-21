@@ -62,8 +62,6 @@ jobs:
         run: cat -n config/ardux.dtsi
       - name: Prep artifact (ardux.dtsi)
         run: cp config/ardux.dtsi ./ardux.dtsi
-      - name: Prep artifact (${{ matrix.shield }}-${{ matrix.board }}-zmk-ardux.hex)
-        run: cp build/zephyr/zmk.hex ${{ matrix.shield }}-${{ matrix.board }}-zmk-ardux.hex
       - name: Prep artifact (${{ matrix.shield }}-${{ matrix.board }}-zmk-ardux.uf2)
         run: cp build/zephyr/zmk.uf2 ${{ matrix.shield }}-${{ matrix.board }}-zmk-ardux.uf2
       - name: Archive artifacts
@@ -73,7 +71,6 @@ jobs:
           path: |
             ardux.dtsi
             ${{ matrix.shield }}-${{ matrix.board }}.dts.pre.tmp
-            ${{ matrix.shield }}-${{ matrix.board }}-zmk-ardux.hex
             ${{ matrix.shield }}-${{ matrix.board }}-zmk-ardux.uf2
         continue-on-error: true
   release:
