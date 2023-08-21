@@ -4,10 +4,14 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: zmk-ardux
       url-base: https://github.com/arduxio
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: zmkfirmware
+      #remote: zmkfirmware
       #revision: ae8299edb3d638f1332475b1da0fdf40afa43fe4
+      remote: petejohanson
+      revision: hardware/rp2040-support
       import: app/west.yml
   self:
     path: config
